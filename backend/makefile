@@ -57,10 +57,13 @@ mysql: ## Enter bash mysql container
 
 migration: ## Create migration file
 	docker-compose exec --user application onfly-nginx bash -c "php artisan make:migration $(name)"
-	docker-compose exec --user application onfly-nginx bash -c "php artisan make:controller Api\\AuthController"
+	docker-compose exec --user application onfly-nginx bash -c "php artisan make:request RegisterPostRequest"
 
 migrate: ## Perform migrations
 	docker-compose exec --user application onfly-nginx php artisan migrate
+
+fresh: ## Perform migrations
+	docker-compose exec --user application onfly-nginx php artisan migrate:fresh
 
 rollback: ## Rollback migration
 	docker-compose exec --user application onfly-nginx php artisan migrate:rollback
@@ -81,7 +84,7 @@ password: ## Reset all passwords
 ##@ Composer
 
 install: ## Composer install dependencies
-	docker-compose exec --user application onfly-nginx bash -c "composer require laravel/sanctum"
+	docker-compose exec --user application onfly-nginx bash -c "php artisan make:resource UserResource"
 
 update: ## Composer install dependencies
 	docker-compose exec --user application onfly-nginx bash -c "composer update"
