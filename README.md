@@ -25,8 +25,10 @@ Caso não queira utilizar o script, basta executar o seguinte comando:
 
 | Verbo Http     |Endpoint                           |
 |----------------|-------------------------------|
-|POST|`api/register` |
-![image](https://github.com/gmarkiin/onfly/assets/69984666/0cde389d-feef-496f-98f2-5886f30a9f35)
+|POST|`api/register` | 
+
+![image](https://github.com/gmarkiin/onfly/assets/69984666/428e89de-2dba-419b-81e2-ddd29d069129)
+
 
     curl --request POST \
       --url http://localhost:8080/api/register \
@@ -39,7 +41,9 @@ Caso não queira utilizar o script, basta executar o seguinte comando:
 | Verbo Http     |Endpoint                           |
 |----------------|-------------------------------|
 |POST|`api/login` |
-![image](https://github.com/gmarkiin/onfly/assets/69984666/b4200e18-2326-4ffb-96b3-525625c4702d)
+
+![image](https://github.com/gmarkiin/onfly/assets/69984666/271b0170-4525-4943-b1ca-f16797fa2cfc)
+
 
     curl --request POST \
       --url http://localhost:8080/api/login \
@@ -52,7 +56,9 @@ Caso não queira utilizar o script, basta executar o seguinte comando:
 | Verbo Http     |Endpoint                           |
 |----------------|-------------------------------|
 |GET|`api/expenses` |
-![image](https://github.com/gmarkiin/onfly/assets/69984666/ae125779-1d6d-4741-8c88-d803f71d0b24)
+
+![image](https://github.com/gmarkiin/onfly/assets/69984666/537df106-dbdf-4b4f-b11d-fd62d2bd6b7a)
+
 
     curl --request GET \
       --url http://localhost:8080/api/expenses \
@@ -62,7 +68,9 @@ Caso não queira utilizar o script, basta executar o seguinte comando:
 | Verbo Http     |Endpoint                           |
 |----------------|-------------------------------|
 |POST|`api/expenses` |
-![image](https://github.com/gmarkiin/onfly/assets/69984666/d2fe2e8a-20c5-4436-a559-d3b70a147662)
+
+![image](https://github.com/gmarkiin/onfly/assets/69984666/a58184c9-fb87-4a57-b785-ac1ca275405e)
+
 
     curl --request POST \
       --url http://localhost:8080/api/expenses \
@@ -78,7 +86,9 @@ Caso não queira utilizar o script, basta executar o seguinte comando:
 | Verbo Http     |Endpoint                           |
 |----------------|-------------------------------|
 |GET|`api/expenses/<id>` |
-![image](https://github.com/gmarkiin/onfly/assets/69984666/0c2f3244-fd67-4df1-8dcd-eded1fdaa28c)
+
+![image](https://github.com/gmarkiin/onfly/assets/69984666/4e8cbe8f-7993-4efb-aa1a-1a7b0d57741a)
+
 
     curl --request GET \
       --url http://localhost:8080/api/expenses/1 \
@@ -88,7 +98,9 @@ Caso não queira utilizar o script, basta executar o seguinte comando:
 | Verbo Http     |Endpoint                           |
 |----------------|-------------------------------|
 |PATCH|`api/expenses/<id>` |
-![image](https://github.com/gmarkiin/onfly/assets/69984666/6eecdae9-e576-4328-80e9-f2682b0a2112)
+
+![image](https://github.com/gmarkiin/onfly/assets/69984666/3b475606-272c-4f4a-a011-862c6c85383d)
+
 
     curl --request PATCH \
       --url http://localhost:8080/api/expenses/1 \
@@ -104,7 +116,9 @@ Caso não queira utilizar o script, basta executar o seguinte comando:
 | Verbo Http     |Endpoint                           |
 |----------------|-------------------------------|
 |DELETE|`api/expenses/<id>` |
-![image](https://github.com/gmarkiin/onfly/assets/69984666/94557ed5-0721-4624-88b2-8ba1a426e3ea)
+
+![image](https://github.com/gmarkiin/onfly/assets/69984666/90504118-b27d-46d9-a7e0-8bbaf198c9a3)
+
 
     curl --request DELETE \
       --url http://localhost:8080/api/expenses/5 \
