@@ -8,11 +8,15 @@ use App\Http\Resources\UserResource;
 use App\Models\User;
 use Illuminate\Http\JsonResponse;
 
-class AuthController extends Controller
+class AuthController extends BaseController
 {
-    public function register(RegisterRequest $request): UserResource
+    public function register(RegisterRequest $request): UserResource|JsonResponse
     {
-        $user = (new User())->createUser($request->toArray());;
+        try {
+            $user = (new User())->createUser($request->toArray());;
+        } catch (\Throwable $e) {
+            return $this->sendError($e->getMessage());
+        }
 
         return new UserResource($user);
     }
