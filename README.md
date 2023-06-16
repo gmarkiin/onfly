@@ -63,7 +63,7 @@ Caso não queira utilizar o script, basta executar o seguinte comando:
     curl --request GET \
       --url http://localhost:8080/api/expenses \
       --header 'Accept: application/json' \
-      --header 'Authorization: Bearer 4|H0mAuThOhfKXEFhr6CwPIbEGm2kBgRrXlgVTYGAW'
+      --header 'Authorization: Bearer token'
 
 | Verbo Http     |Endpoint                           |
 |----------------|-------------------------------|
@@ -75,7 +75,7 @@ Caso não queira utilizar o script, basta executar o seguinte comando:
     curl --request POST \
       --url http://localhost:8080/api/expenses \
       --header 'Accept: application/json' \
-      --header 'Authorization: Bearer 14|f7UfR49jXHh0l1UqfjSUGiwRGbTyIA23j5A2F7Mg' \
+      --header 'Authorization: Bearer token' \
       --header 'Content-Type: application/json' \
       --data '{
     	"description": "teste",
@@ -93,7 +93,7 @@ Caso não queira utilizar o script, basta executar o seguinte comando:
     curl --request GET \
       --url http://localhost:8080/api/expenses/1 \
       --header 'Accept: application/json' \
-      --header 'Authorization: Bearer 3|Z9tXBJeko9OYR4paK2p8Du2rfffL5jO8pnTy5qzd'
+      --header 'Authorization: Bearer token'
 
 | Verbo Http     |Endpoint                           |
 |----------------|-------------------------------|
@@ -105,7 +105,7 @@ Caso não queira utilizar o script, basta executar o seguinte comando:
     curl --request PATCH \
       --url http://localhost:8080/api/expenses/1 \
       --header 'Accept: application/json' \
-      --header 'Authorization: Bearer 3|Z9tXBJeko9OYR4paK2p8Du2rfffL5jO8pnTy5qzd' \
+      --header 'Authorization: Bearer token' \
       --header 'Content-Type: application/json' \
       --data '{
     	"description": "adsadas@gmail.com",
@@ -123,7 +123,7 @@ Caso não queira utilizar o script, basta executar o seguinte comando:
     curl --request DELETE \
       --url http://localhost:8080/api/expenses/5 \
       --header 'Accept: application/json' \
-      --header 'Authorization: Bearer 3|Z9tXBJeko9OYR4paK2p8Du2rfffL5jO8pnTy5qzd'
+      --header 'Authorization: Bearer token'
 
 ##  
 
