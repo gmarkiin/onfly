@@ -15,4 +15,12 @@ class AuthController extends Controller
 
         return new UserResource($user);
     }
+
+    public function login(RegisterPostRequest $request): UserResource
+    {
+        $user = new User();
+        $user->createUser($request->toArray());
+
+        return new UserResource($user);
+    }
 }
