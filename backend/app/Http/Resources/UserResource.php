@@ -30,8 +30,13 @@ class UserResource extends JsonResource
             'token' => $user->token
         ];
 
-        return match ($user->stage) {
-            User::STAGE_NEWLY_CREATED => $newlyCreatedReturn
+        $authenticatedReturn = [
+            'token' => $user->token
+        ];
+
+        return match ($user->state) {
+            User::STATE_NEWLY_CREATED => $newlyCreatedReturn,
+            User::STATE_AUTHENTICATED => $authenticatedReturn
         };
     }
 }
