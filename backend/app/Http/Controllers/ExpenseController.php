@@ -6,7 +6,6 @@ use App\Http\Requests\ExpensesRequest;
 use App\Http\Resources\ExpensesResource;
 use App\Jobs\SendExpenseCreateEmail;
 use App\Models\Expense;
-use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Auth;
 
@@ -17,7 +16,7 @@ class ExpenseController extends BaseController
         $user = Auth::user();
         $expense = Expense::whereBelongsTo($user)->get();
 
-        return $this->sendResponse($expense, 'All the expenses was loaded');
+        return $this->sendResponse((new ExpensesResource($expense))->resource, 'All the expenses was loaded');
     }
 
     public function store(ExpensesRequest $request): JsonResponse
