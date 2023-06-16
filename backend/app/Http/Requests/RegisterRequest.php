@@ -6,7 +6,7 @@ use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Http\Exceptions\HttpResponseException;
 
-class LoginPostRequest extends BaseRequestForm
+class RegisterRequest extends BaseRequestForm
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,8 +24,9 @@ class LoginPostRequest extends BaseRequestForm
     public function rules(): array
     {
         return [
-            'email' => 'required|string',
-            'password' => 'required',
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|unique:users,email|string|max:255',
+            'password' => 'required|string|min:6',
         ];
     }
 }

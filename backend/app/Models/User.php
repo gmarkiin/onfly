@@ -4,6 +4,7 @@ namespace App\Models;
 
 use AllowDynamicProperties;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Notifications\Notifiable;
@@ -75,5 +76,10 @@ class User extends Authenticatable
         }
 
         return false;
+    }
+
+    public function expense(): HasMany
+    {
+        return $this->hasMany(Expense::class);
     }
 }
