@@ -13,7 +13,7 @@ class Expense extends Model
     protected $fillable = [
         'description',
         'value',
-        'created_at',
+        'expense_date',
     ];
 
     public $timestamps = false;

@@ -29,6 +29,7 @@ class ExpenseController extends BaseController
                 $expense = $model;
             }
             SendExpenseCreateEmail::dispatch($user);
+
         } catch (\Throwable $e) {
             return $this->sendError($e->getMessage());
         }

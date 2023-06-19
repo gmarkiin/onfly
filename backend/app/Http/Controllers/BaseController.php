@@ -8,11 +8,9 @@ class BaseController extends Controller
 {
     public function sendResponse(mixed $result, string $message = null): JsonResponse
     {
-        $response = [
-            'data' => $result,
-        ];
+        $response = $result;
         is_null($message) ?: $response['message'] = $message;
-        return response()->json($response);
+        return response()->json(['data' => $result]);
     }
 
     public function sendError(string $error, int $code = 404): JsonResponse

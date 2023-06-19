@@ -28,7 +28,7 @@ class ExpensesRequest extends FormRequest
         return [
             'description' => 'string|max:255',
             'value' => 'required|numeric|min:0',
-            'created_at' => 'required|date_format:Y-m-d|before_or_equal:' . $actualDate,
+            'expense_date' => 'required|date_format:Y-m-d|before_or_equal:' . $actualDate,
         ];
     }
 }

@@ -19,7 +19,7 @@ class ExpensesResource extends JsonResource
             'id' => $this->id,
             'description' => $this->description,
             'value' => $this->value,
-            'created_at' => $this->created_at
+            'expense_date' => $this->expense_date
         ];
     }
 }

@@ -16,7 +16,7 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained()->cascadeOnDelete();
             $table->string('description', 191)->nullable();
             $table->float('value');
-            $table->dateTime('created_at');
+            $table->dateTime('expense_date');
         });
     }
 
