@@ -10,6 +10,7 @@ class BaseController extends Controller
     {
         $response = $result;
         is_null($message) ?: $response['message'] = $message;
+
         return response()->json(['data' => $result]);
     }
 
