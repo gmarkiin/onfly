@@ -80,7 +80,7 @@ Caso não queira utilizar o script, basta executar o seguinte comando:
       --data '{
     	"description": "teste",
     	"value": 560.70,
-    	"created_at": "2023-02-20"
+    	"expense_date": "2023-02-20"
     }'
 
 | Verbo Http     |Endpoint                           |
@@ -110,7 +110,7 @@ Caso não queira utilizar o script, basta executar o seguinte comando:
       --data '{
     	"description": "adsadas@gmail.com",
     	"value": 31,
-    	"created_at": "2023-02-15"
+    	"expense_date": "2023-02-15"
     }'
 
 | Verbo Http     |Endpoint                           |
