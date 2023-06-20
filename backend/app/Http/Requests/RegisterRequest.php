@@ -24,7 +24,7 @@ class RegisterRequest extends BaseRequestForm
         return [
             'name' => 'required|string|max:255',
             'email' => 'required|email|unique:users,email|string|max:255',
-            'password' => 'required|string|min:6',
+            'password' => 'required|string',
         ];
     }
 }

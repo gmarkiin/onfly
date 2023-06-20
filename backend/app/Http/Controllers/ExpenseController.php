@@ -16,7 +16,7 @@ class ExpenseController extends BaseController
         $user = Auth::user();
         $expense = Expense::whereBelongsTo($user)->get();
 
-        return $this->sendResponse((new ExpensesResource($expense))->resource, 'All the expenses was loaded');
+        return $this->sendResponse((new ExpensesResource($expense))->resource);
     }
 
     public function store(ExpensesRequest $request): JsonResponse

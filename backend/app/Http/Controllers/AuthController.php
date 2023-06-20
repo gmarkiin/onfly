@@ -23,10 +23,10 @@ class AuthController extends BaseController
 
     public function login(LoginRequest $request): JsonResponse|UserResource
     {
-        $user = User::where('email', $request->email)->first();
         $requestData = $request->only('email', 'password');
+        $user = User::where('email', $request->email)->first();
 
-        if(!$user->checkToken($requestData)) {
+        if (is_null($user) || !$user->checkToken($requestData)) {
             return response()->json([
                 'message' => 'Unauthorized',
                 'reason' => 'Invalid email or password'
