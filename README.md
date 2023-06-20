@@ -1,7 +1,7 @@
 
 # Onfly - Test 
 
-Após clonar o projeto execute o seguinte comando no terminal :
+Após clonar o projeto acesse a pasta `backend` e execute o seguinte comando no terminal :
 
     ./init.sh
    Preparei esse script shell básico para facilitar a inicialização do projeto,após executar o script, o projeto já está totalmente apto a ser testado da maneira que desejar.
@@ -14,6 +14,10 @@ Se preferir não utilizar o script ./init para iniciar, basta executar os seguin
     docker-compose exec onfly-nginx bash -c "su -c \"composer install\" application"
     docker-compose exec onfly-nginx bash -c "su -c 'php artisan key:generate' application"
     docker-compose exec onfly-nginx php artisan migrate
+#
+Após isso acesse a pasta frontend e execute o seguinte comando para realizar a build do front
+
+    yarn install && yarn quasar dev --watch
 #
 Para executar os testes unitários também preparei um script a fim de agilizar a execução do comando
 
