@@ -62,7 +62,7 @@ export default defineComponent({
       try {
         await register(form.value)
         notifySucess('User create with sucess!')
-        await router.push({name: 'index'})
+        await router.push({ name: 'index' })
       } catch (error) {
         notifyError(error.message)
       }
